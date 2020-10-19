@@ -1,11 +1,13 @@
 <template>
-  <div class="midSection">
+  <div class="projSection">
     <h5 class="bord_highlight sectHeader" :style="{width: widthNow}">{{ title }}</h5>
     <!-- The Big question is how to create a loop for this with data points that CAN have
       links associated -->
     <ul>
-      <li v-for="item in myExp" v-bind:key="item.id">
-        {{ item.desc }}
+      <li v-for="proj in myExp" v-bind:key="proj.id">
+        <a v-bind:href="proj.ref" target="_blank">
+          {{ proj.desc }}
+        </a>
       </li>
     </ul>
   </div>
@@ -15,7 +17,7 @@
 import './BrianMain.scss'
 
 export default {
-  name: 'MidSection',
+  name: 'ProjSection',
   props: {
     title: String,
     myExp: Array,

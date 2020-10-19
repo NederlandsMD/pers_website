@@ -1,0 +1,29 @@
+{
+  "workExp": [
+  {"id": 1, "desc": "MirLogic Solutions Corporation - Alexandria, VA (Jan 2019 - Present)"},
+  {"id": 2, "desc": "TicketNetwork - SuperIngressos - South Windsor, CT (Jun 2013 - Jul 2014)"},
+  {"id": 3, "desc": "Ankara Üniversitesi Vakfi Ilkegitim Okullu - Ankara, Turkey (Oct 2009 - Jun 2010)"},
+  {"id": 4, "desc": "U.S. Embassy Ankara - Ankara, Turkey (Mar 2009 - Jun 2009)"}
+],
+"eduExp": [
+  {"id": 1, "desc": "Yale university, MA, European Studies  -- 2013"},
+  {"id": 2, "desc": "Ghent university (Belgium), MA, European Studies -- 2011"},
+  {"id": 3, "desc": "University of California Los Angeles, BA, European Studies -- 2009"},
+  {"id": 4, "desc": "George Washington university, Professional Certificate, Data Analytics  -- 2018"}
+],
+"skills": [
+  {"id": 1, "desc": "Back-end: Python, R, SQL"},
+  {"id": 2, "desc": "Front-end: JavaScript, React.js, Vue.js, jQuery, CSS, HTML, ES6, d3.js"},
+  {"id": 3, "desc": "Other tools: Tableau, PowerBI"},
+  {"id": 4, "desc": "Version Control: Git, Bash, GitLab"}
+],
+"projects": [
+  {"id": 1, "ref": "https://www.cdc.gov/nchs/maternal-mortality/dashboard/", "desc": "NCHS: Maternal Mortality Dashboard"},
+  {"id": 2, "ref": "https://www.cdc.gov/nchs/data-visualization/life-expectancy/", "desc": "NCHS: Life Expectancy by U.S. Census Tract"},
+  {"id": 3, "ref": "https://core-viz.herokuapp.com/", "desc": "Bubble Suburst Chart for CORE Tool"},
+  {"id": 4, "ref": "http://ahrportal.s3.amazonaws.com/index.html", "desc": "AHR Portal Prototype"}
+],
+"widthProf": "260px",
+"widthEdu": "130px",
+"widthProj": "150px"
+}
