@@ -1,0 +1,60 @@
+// <!-- Add "scoped" attribute to limit CSS to this component only -->
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+$greeny: #42b983;
+$teal: #008080;
+$mblue: #73a9c2;
+$corange: #e9692c;
+
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
+}
+
+.bord_highlight {
+  color: #ffffff;
+  background-color: $corange;
+  font-weight: bold;
+  font-style: italic;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  // margin-left: 15px;
+}
+
+.header {
+  margin-top: -50px;
+  margin-left: 15px;
+}
+
+.profile {
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.midSection {
+  margin-top: 20px;
+}
+
+.sectHeader {
+  width: 260px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+li {
+  list-style-type: circle;
+}

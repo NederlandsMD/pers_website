@@ -1,0 +1,20 @@
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+$dullgrey: #2c3e50;
+$skyblue: #87ceeb;
+$lightskyblue: #d6eef8;
+
+body {
+  background-color: $lightskyblue !important;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: $dullgrey;
+  margin-top: 60px;
+  // background-color: $lightskyblue;
+}
