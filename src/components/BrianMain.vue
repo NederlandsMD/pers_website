@@ -11,10 +11,10 @@
     <div class="row">
       <div class="col-md-6 profile">
         {{ opening_line }}
-        <JobExpSection title="Professional Experience"/>
-        <JobExpSection title="Education"/>
-        <JobExpSection title="My Skills"/>
-        <JobExpSection title="My Projects"/>
+        <MidSection title="Professional Experience"/>
+        <MidSection1 title="Education"/>
+        <MidSection2 title="My Skills"/>
+        <MidSection3 title="My Projects"/>
         <!--<br />
         <BottomLinks/> -->
       </div>
@@ -56,7 +56,10 @@
 
 <script>
 import './BrianMain.scss'
-import JobExpSection from './JobExpSection.vue'
+import MidSection from './MidSection.vue'
+import MidSection1 from './MidSection1.vue'
+import MidSection2 from './MidSection2.vue'
+import MidSection3 from './MidSection3.vue'
 
 export default {
   name: 'BrianMain',
@@ -65,7 +68,10 @@ export default {
     opening_line: String
   },
   components: {
-    JobExpSection
+    MidSection,
+    MidSection1,
+    MidSection2,
+    MidSection3
   }
 }
 </script>
