@@ -74,3 +74,9 @@ a {
   transition-duration: 0.25s;
   transition-timing-function: ease-in;
 }
+
+#Bri_foot {
+  transform: translate(-250px, -350px);
+  position: absolute;
+  z-index: -1;
+}

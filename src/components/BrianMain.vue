@@ -19,9 +19,8 @@
         <BottomLinks/> -->
       </div>
       <div class="col-md-6">
-        <WorldMap/>
-        <!--<br/>
-        <BrianPic/> -->
+        <WorldMap v-bind:world_msg="worldMsg"/>
+        <img id="Bri_foot" height="800px" alt="Brian_picture" src="../assets/Brian_for_web.png">
       </div>
         <!-- <img alt="Brian Pic" src="../assets/bds_photo.png" height="200"> -->
     </div>
@@ -48,7 +47,8 @@ export default {
   },
   data() {
     return {
-      myJson: json
+      myJson: json,
+      worldMsg: "Brian's World"
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="worldMap">
-    <h5>Brian's World</h5>
+    <h5 id="b_world">{{ world_msg }}</h5>
     <div id="worldSvg"></div>
   </div>
 </template>
@@ -15,7 +15,8 @@ import { bus } from '../main'
 export default {
   name: 'WorldMap',
   props: {
-    brianCountries: Array
+    brianCountries: Array,
+    world_msg: String
   },
   mounted() {
     this.createMap();
@@ -67,7 +68,7 @@ export default {
         .attr( 'display', 'block')
         .style('border', '1px solid #73a9c2')
         .style('margin-left', '-120px')
-        .style('margin-top', '60px');
+        .style('margin-top', '20px');
 
       const path = d3.geoPath()
         .projection(projection);
@@ -97,7 +98,15 @@ export default {
                 .duration(250)
                 .ease(d3.easeLinear)
                 .attr('fill', '#e9692c')
-              bus.$emit('fireMethod', ctyName);
+              bus.$emit('kickIn', ctyName);
+
+              //text remove and add here is a problem
+              // d3.select("#b_world")
+              //   .remove('text');
+              //
+              // d3.select("#b_world")
+              //   .append('text')
+              //   .text(ctyName);
           }
 
           // As a result of this mouseover, I might want some field to pop up and say the name of the Country
@@ -106,11 +115,13 @@ export default {
         .on('mouseleave', function(d) {
           let ctyID = d.originalTarget.__data__.id;
           if(Object.values(brianCountryDict).indexOf(ctyID) > -1) {
+            let ctyName = Object.keys(brianCountryDict).find(key => brianCountryDict[key] === ctyID);
             d3.select(this)
               .transition()
               .duration(250)
               .ease(d3.easeLinear)
               .attr('fill', '#73a9c2')
+            bus.$emit('kickOut', ctyName);
           }
         });
     }
