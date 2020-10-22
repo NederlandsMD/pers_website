@@ -1,8 +1,6 @@
 <template>
   <div class="midSection">
     <h5 class="bord_highlight sectHeader" :style="{width: widthNow}">{{ title }}</h5>
-    <!-- The Big question is how to create a loop for this with data points that CAN have
-      links associated -->
     <ul>
       <li v-for="item in myExp" v-bind:key="item.id">
         {{ item.desc }}
@@ -13,6 +11,7 @@
 
 <script>
 import './BrianMain.scss'
+import { bus } from '../main'
 
 export default {
   name: 'MidSection',
@@ -20,6 +19,11 @@ export default {
     title: String,
     myExp: Array,
     widthNow: String
+  },
+  created() {
+    bus.$on('fireMethod', (ctyName) => {
+      console.log(ctyName);
+    })
   }
 }
 </script>

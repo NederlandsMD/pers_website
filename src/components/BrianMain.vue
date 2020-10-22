@@ -10,7 +10,7 @@
     </div>
     <div class="row">
       <div class="col-md-6 profile">
-        {{ opening_line }}
+        <p id="openingLine">{{ opening_line }}</p>
         <MidSection title="Professional Experience" v-bind:my-exp="myJson.workExp" v-bind:width-now="myJson.widthProf"/>
         <MidSection title="Education" v-bind:my-exp="myJson.eduExp" v-bind:width-now="myJson.widthEdu"/>
         <MidSection title="My Skills" v-bind:my-exp="myJson.skills" v-bind:width-now="myJson.widthEdu"/>
@@ -18,9 +18,9 @@
         <!--<br />
         <BottomLinks/> -->
       </div>
-      <div class="col-md-3">
-        <!-- <WorldMap/>
-        <br/>
+      <div class="col-md-6">
+        <WorldMap/>
+        <!--<br/>
         <BrianPic/> -->
       </div>
         <!-- <img alt="Brian Pic" src="../assets/bds_photo.png" height="200"> -->
@@ -33,6 +33,7 @@ import './BrianMain.scss'
 import json from '../assets/full_data.json'
 import MidSection from './MidSection.vue'
 import ProjSection from './ProjSection.vue'
+import WorldMap from './WorldMap.vue'
 
 export default {
   name: 'BrianMain',
@@ -42,9 +43,10 @@ export default {
   },
   components: {
     MidSection,
-    ProjSection
+    ProjSection,
+    WorldMap
   },
-  data: function () {
+  data() {
     return {
       myJson: json
     }
